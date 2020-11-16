@@ -94,7 +94,7 @@ const Info = () => {
                 className={classes.image}
                 component="img"
                 alt={data.name}
-                image={"http://127.0.0.1:8000" + data.photo}
+                image={"https://mushrooming-backend.herokuapp.com" + data.photo}
                 opacity="0.5"
                 title={data.name}
               ></CardMedia>
