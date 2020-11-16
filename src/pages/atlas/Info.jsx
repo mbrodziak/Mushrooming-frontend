@@ -15,7 +15,7 @@ import Button from "@material-ui/core/Button";
 import { useNavigate } from "react-router-dom";
 
 const fetchDetails = async (id) => {
-  const res = await fetch(`https://mushrooming-backend.herokuapp.com/mushrooms/${id}/`);
+  const res = await fetch(`http://127.0.0.1:8000/mushrooms/${id}/`);
   return res.json();
 };
 
@@ -25,9 +25,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "white",
     background: "rgba(41, 40, 38, 0.5)",
-    margin: "0 auto",
-    width: "80%",
-    height: "80%",
+    margin: "0 auto"
   },
   cont: {
     padding: theme.spacing(2),
@@ -50,9 +48,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "3px",
     marginTop: "1rem",
     marginBottom: "1rem",
-  },
-  root: {
-    width: "100%",
   },
   heading: {
     fontSize: theme.typography.pxToRem(17),
@@ -89,7 +84,7 @@ const Info = () => {
       {status === "error" && <p>Błąd pobierania danych z bazy!</p>}
       {status === "success" && (
         <Box m={5}>
-          <Container maxWidth="md">
+          <Container maxWidth="md" >
             <Card className={classes.paper}>
               <Typography variant="h4" color="secondary">
                 {data.name}
@@ -99,7 +94,7 @@ const Info = () => {
                 className={classes.image}
                 component="img"
                 alt={data.name}
-                image={"https://mushrooming-backend.herokuapp.com" + data.photo}
+                image={"http://127.0.0.1:8000" + data.photo}
                 opacity="0.5"
                 title={data.name}
               ></CardMedia>
