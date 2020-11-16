@@ -15,7 +15,7 @@ import Button from "@material-ui/core/Button";
 import { useNavigate } from "react-router-dom";
 
 const fetchDetails = async (id) => {
-  const res = await fetch(`http://127.0.0.1:8000/mushrooms/${id}/`);
+  const res = await fetch(`https://mushrooming-backend.herokuapp.com/mushrooms/${id}/`);
   return res.json();
 };
 
