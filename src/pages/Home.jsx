@@ -19,12 +19,12 @@ const Home = () => {
     <Box
       display="flex"
       flexDirection="column"
-      alignContent="space-around"
-      alignItems="space-around"
-      justifyContent="space-around"
+      alignContent="center"
+      alignItems="center"
+      justifyContent="center"
       height="80vh"
       >
-      <Box color="white" marginRight="10rem" marginLeft="10rem">
+      <Box color="white" marginRight="15%" marginLeft="15%">
         <Typography className={classes.text} variant="body1" align="center">
           Mushrooming to nowoczesny internetowy atlas grzybów. Umożliwia on
           przeglądanie rozmaitych gatunków grzybów. W przyszłości możliwe będzie
